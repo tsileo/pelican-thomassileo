@@ -1,50 +1,25 @@
-# SVBHACK
+# pelican-thomassileo
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
+This theme is a fork of [pelican-svbhack](https://github.com/giulivo/pelican-svbhack).
 
-## DEMO
+Work in progres, added some colors, some SEO enhancement, but some things are hardcoded in the template file for now, so if you are planning to use it, you will need to dig into template files.
+
+## Demo
 
 You can see the [theme in action](http://thomassileo.com/).
 
-## FEATURES
+## Authors
 
-- responsive
-- syntax highlighting for pre blocks
-- supports google analytics
-- custom list of links
+Thanks to **Giulio Fidente**, the original author of [pelican-svbhack](https://github.com/giulivo/pelican-svbhack).
 
-## KNOWN ISSUES
+## License (MIT)
 
-- no IE testing
-- no custom menu
+Copyright (c) 2012 William Ting
+Copyright (c) 2013 Giulio Fidente
+Copyright (c) 2013 Thomas Sileo
 
-## INSTALL
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Clone the [repository](https://github.com/giulivo/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## PELICANCONF.PY
-
-Supports a number of common global variables but patches are welcomed if you need better support.
-
-- `GOOGLE_ANALYTICS` your UA-XYZ code
-
-- `USER_LOGO_URL` make this point to a page/face logo
-
-- `TAGLINE` some text rendered right below the logo
-
-- `INTERNET_DEFENSE_LEAGUE` set to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
-
-When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
-
-## MODIFICATIONS
-
-- Accent color can be changed by editing `@accent` in `./static/css/style.less`.
-- A different Pygmentize theme can be used by editing `./Makefile` and running `make pygments`.
-
-## AUTHOR
-
-pelican-svbhack is authored by Giulio Fidente.
-
-## LICENSE
-
-Released under MIT License, full details in `LICENSE` file.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
