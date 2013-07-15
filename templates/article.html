@@ -8,7 +8,10 @@
 {% block content %}
 <article>
   <div id="article_title">
-    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+<h1><a href="{% if article.link %}{{ article.link }}{% else %}{{ SITEURL }}/{{ article.url }}{% endif %}" rel="bookmark" {% if not article.link %}title="Permalink to {{ article.title|striptags }}"{% endif %}>{{ article.title}}</a>{% if article.link %}<a href="{{ SITEURL }}/{{ article.url }}" class="permalinkpost" title="Permalink to {{ article.title|striptags }}">&#9733;</a>{% endif %}</h1>
+
+
+
     <p class="article_meta"><time datetime="{{ article.date.isoformat() }}" pubdate data-updaYted="true"> {{ article.locale_date }}</time> by <a rel="author" href="https://plus.google.com/105383704566845547994">Thomas Sileo</a></p>
   </div>
   <div id="article_text">
@@ -35,11 +38,7 @@
   </li>
 
 <li>
-  
-  <!-- Place this tag where you want the +1 button to render. -->
 <div class="g-plusone"></div>
-
-<!-- Place this tag after the last +1 button tag. -->
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -48,6 +47,8 @@
   })();
 </script>
 </li>
+
+<li><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></li>
 
 </ul>
   
