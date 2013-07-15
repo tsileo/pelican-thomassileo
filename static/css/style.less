@@ -26,8 +26,11 @@ a {
 }
 
 .article_meta {
-  color: @dark-grey;
+  color: @med-grey;
   a {
+    color: @dark-grey;
+  }
+  time {
     color: @dark-grey;
   }
 }
@@ -87,23 +90,24 @@ h3, h2, h1 {
 }
 .user_logo {
   border-radius: 15px;
+  width: 180px;
 }
 main {
   header {
-    padding: 25px 40px;
-    border-top: @light-grey 1px solid;
-    border-bottom: @light-grey 1px solid;
+    padding: 25px 40px 0 40px;
 
     p {
-      font-weight: bold;
-      font-size: 0.825em;
-      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1em;
+    }
+    h1 {
+      font-weight: 600px;
     }
   }
 
   article {
     max-width: 640px;
-    padding: 25px 40px 0px 40px;
+    padding: 20px 40px 0px 40px;
 
     div#disqus_thread {
       padding: 25px 0;
@@ -144,20 +148,20 @@ main {
         margin: 2px;
         padding: 0;
         color: @black;
-        font-size: 0.75em;
         font-family: @mono;
         background: @light-grey;
       }
 
       pre {
         margin: 22px 2px 22px 2px;
-        padding: 22px 11px;
+        padding: 11px;
         color: @black;
         font-size: 0.95em;
         font-family: @mono;
         background: @light-grey;
         line-height: 1.125em;
         overflow-x: auto;
+        border-radius: 3px;
       }
 
       blockquote {
@@ -200,8 +204,18 @@ main {
 
   div#ending_message {
     padding: 0 40px 0 40px;
-    font-color: @light-grey;
-    font-size: 0.8em;
+    p {
+      color: @med-grey;
+      font-size: 0.9em;
+      strong {
+        font-weight: normal;
+        color: @dark-grey;
+      }
+      a {
+        color: @dark-grey;
+      }
+    }
+    
   }
 }
 

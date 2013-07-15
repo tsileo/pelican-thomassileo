@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-{% block title %}Category: {{ category }}{% endblock %}
+{% block title %}Category: {{ category }} - {{ SITENAME }}{% endblock %}
 
 {% block head %}
 {% if CATEGORY_FEED_ATOM %}
@@ -11,11 +11,13 @@
 {% endblock %}
 
 {% block header %}
-<p>Category: {{ category }}
+<header>
+<h1>Category: {{ category }}
 {% if CATEGORY_FEED_ATOM %}
 &#124; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category) }}">Atom Feed</a>
 {% endif %}
 {% if CATEGORY_FEED_RSS %}
 &#124; <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category) }}">RSS Feed</a>
-{% endif %}</p>
+{% endif %}</h1>
+</header>
 {% endblock %}

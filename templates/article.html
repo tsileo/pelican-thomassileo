@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 {% block head %}
 <meta name="date" contents="{{ article.date }}" />
+{% if article.description %}
+<meta name="description" content="{{ article.description }}">
+{% endif %}
 {% endblock %}
 
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <article>
   <div id="article_title">
 <h1><a href="{% if article.link %}{{ article.link }}{% else %}{{ SITEURL }}/{{ article.url }}{% endif %}" rel="bookmark" {% if not article.link %}title="Permalink to {{ article.title|striptags }}"{% endif %}>{{ article.title}}</a>{% if article.link %}<a href="{{ SITEURL }}/{{ article.url }}" class="permalinkpost" title="Permalink to {{ article.title|striptags }}">&#9733;</a>{% endif %}</h1>
 
-
-
-    <p class="article_meta"><time datetime="{{ article.date.isoformat() }}" pubdate data-updaYted="true"> {{ article.locale_date }}</time> by <a rel="author" href="https://plus.google.com/105383704566845547994">Thomas Sileo</a></p>
+    <p class="article_meta">{% if article.updated %}Updated <time datetime="{{ article.updated }}">{{ article.locale_updated }}</time> | {% endif %}<time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time> by <a rel="author" href="https://plus.google.com/105383704566845547994">Thomas Sileo</a></p>
   </div>
   <div id="article_text">
     {{ article.content }}
@@ -48,7 +49,7 @@
 </script>
 </li>
 
-<li><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></li>
+<li><script src="http://www.reddit.com/static/button/button1.js"></script></li>
 
 </ul>
   

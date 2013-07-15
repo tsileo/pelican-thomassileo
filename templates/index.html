@@ -7,7 +7,7 @@
 
 </div>
 
-    <p class="article_meta"><time datetime="{{ article.date.isoformat() }}" pubdate data-updaYted="true"> {{ article.locale_date }}</time> by <a rel="author" href="https://plus.google.com/105383704566845547994">Thomas Sileo</a></p>
+    <p class="article_meta">{% if article.updated %}Updated <time datetime="{{ article.updated }}">{{ article.locale_updated }}</time> | {% endif %}<time datetime="{{ article.date.isoformat() }}" pubdate data-updaYted="true"> {{ article.locale_date }}</time> by <a rel="author" href="https://plus.google.com/105383704566845547994">Thomas Sileo</a></p>
   </div>
   <div id="article_text">
     {{ article.summary }}

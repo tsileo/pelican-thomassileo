@@ -1,8 +1,16 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block head %}
+{% if page.date %}
+<meta name="date" contents="{{ page.date }}" />
+{% endif %}
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% endif %}
+{% endblock %}
 
 {% block header %}
-<p>Updated on {{ page.locale_date }}</p>
 {% endblock %}
 
 {% block content %}
