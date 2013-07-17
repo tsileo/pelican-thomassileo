@@ -17,7 +17,7 @@
 .gs { font-weight: 600 } /* Generic.Strong */
 .gu { color: #800080; font-weight: 600 } /* Generic.Subheading */
 .gt { color: #0044DD } /* Generic.Traceback */
-.kc { color: #008000;w font-weight: 600 } /* Keyword.Constant */
+.kc { color: #008000; font-weight: 600 } /* Keyword.Constant */
 .kd { color: #008000; font-weight: 600 } /* Keyword.Declaration */
 .kn { color: #008000; font-weight: 600 } /* Keyword.Namespace */
 .kp { color: #008000 } /* Keyword.Pseudo */

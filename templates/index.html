@@ -1,4 +1,20 @@
 {% extends "base.html" %}
+
+{% block canonical %}
+{% if articles_page.number == 1 %}
+<link rel="canonical" href="http://thomassileo.com/">
+{% endif %}
+{% endblock %}
+
+{% block title %}
+{% if articles_page.number == 1 %}
+{{ SITENAME }}
+{% else %}
+{{ SITENAME }} - page {{ articles_page.number }}
+{% endif %}
+{% endblock %}
+
+
 {% block content %}
 {% for article in articles_page.object_list %}
 <article class="article_list">

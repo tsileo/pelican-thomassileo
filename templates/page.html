@@ -5,9 +5,7 @@
 {% if page.date %}
 <meta name="date" contents="{{ page.date }}" />
 {% endif %}
-{% if page.description %}
-<meta name="description" content="{{ page.description }}">
-{% endif %}
+<meta name="description" content="{{ page.content|striptags|truncate(150) }}">
 {% endblock %}
 
 {% block header %}
